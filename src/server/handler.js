@@ -44,7 +44,7 @@ async function postPredictHandler(request, h) {
 
 async function getHistoriesHandler(request, h) {
   try {
-    const predictionsRef = firestore.collection('prediction');
+    const predictionsRef = firestore.collection('predictions');
     const snapshot = await predictionsRef.get();
 
     if (snapshot.empty) {
